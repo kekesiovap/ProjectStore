@@ -26,6 +26,11 @@ public class Pastry extends Food implements Piece {
 
     @Override
     public String getName() {
-        return getName();
+        return super.getName();
+    }
+
+    @Override
+    public void setAmount(int amount) {
+
     }
 }

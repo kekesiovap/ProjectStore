@@ -13,25 +13,8 @@ public class Global {
         print(message);
     }
 
-    private final String username="store";
-    private final String password="pass";
-    private final String url="jdbc:mysql://localhost:3306/storeDb";
-
-    private Connection getConnection() {
-        Connection connection;
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Driver loaded");
-            connection= DriverManager.getConnection(url,username,password);
-            return connection;
-        }
-        catch (ClassNotFoundException e){
-            e.printStackTrace();
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
-        return null;
-    }
+    public static final String username="store";
+    public static final String password="pass";
+    public static final String url="jdbc:mysql://localhost:3306/storedb";
 
 }

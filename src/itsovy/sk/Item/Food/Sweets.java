@@ -24,8 +24,13 @@ public class Sweets extends Food implements Piece {
         return amount;
     }
 
-    @Override
+   @Override
     public String getName() {
         return super.getName();
+    }
+
+    @Override
+    public void setAmount(int amount) {
+
     }
 }

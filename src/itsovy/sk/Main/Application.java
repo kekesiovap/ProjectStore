@@ -12,7 +12,12 @@ import itsovy.sk.Item.Food.Pastry;
 import itsovy.sk.Item.Goods.Goods;
 import itsovy.sk.Item.Item;
 
-public class Application {
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class Application{
 
     private Bill bill;
 
@@ -25,7 +30,7 @@ public class Application {
         return app;
     }
 
-    public void example() throws BillException {
+    public void example() throws BillException, IOException, SQLException, TransformerException, ParserConfigurationException {
         Bill bill = new Bill();
 
         Bottle milk = new Bottle("Milk 1,5", 0.59, 4 );
@@ -37,8 +42,11 @@ public class Application {
         Food apple = new Fruit("Green Apple", 0.5, 100, 0.370);
         bill.addItem(apple);
 
-        Item pencil = new Goods("Pencil HB", 0.8, 2, Category.SCHOOL);
+        Item pencil = new Goods("Pencil HB", 0.8, 1, Category.SCHOOL);
         bill.addItem(pencil);
+
+        Item pencil2 = new Goods("Pencil HB", 0.8, 2, Category.SCHOOL);
+        bill.addItem(pencil2);
 
         Draft radler=new Draft("Pomelo/Grep", 1, true, 0.5);
         bill.addItem(radler);
@@ -47,6 +55,13 @@ public class Application {
         bill.addItem(plzen);
         bill.removeItem(plzen);
 
-    }
+        bill.printBill();
 
+        System.out.println("Check ID: " +bill.getId()+ " Number of entries: "+bill.getCount()+" Total price: "+String.format("%.02f", bill.getFinalPrice())+"€");
+        System.out.println("Sum converted to dollars: " +String.format("%.02f", bill.getConvertedFinalPrice()) +"$");
+
+        XML check = new XML();
+        check.createXML(bill);
+        bill.closeBill();
+    }
 }

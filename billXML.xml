@@ -1,0 +1,40 @@
+<Bill>
+<DateOfPurchase>
+<Date>2019-04-05</Date>
+<Time>22:45:25</Time>
+</DateOfPurchase>
+<Item>
+<Name>Milk 1,5</Name>
+<Price>0.59</Price>
+<Amount>4</Amount>
+<Unit>pcs</Unit>
+</Item>
+<Item>
+<Name>Margarita</Name>
+<Price>1.1</Price>
+<Amount>2</Amount>
+<Unit>pcs</Unit>
+</Item>
+<Item>
+<Name>Green Apple</Name>
+<Price>0.5</Price>
+<Amount>0.37</Amount>
+<Unit>kg</Unit>
+</Item>
+<Item>
+<Name>Pencil HB</Name>
+<Price>0.8</Price>
+<Amount>1</Amount>
+<Unit>pcs</Unit>
+</Item>
+<Item>
+<Name>Pomelo/Grep</Name>
+<Price>1.0</Price>
+<Amount>0.5</Amount>
+<Unit>l</Unit>
+</Item>
+<Price>
+<EUR>6.045</EUR>
+<USD>6.7903484999999995</USD>
+</Price>
+</Bill>

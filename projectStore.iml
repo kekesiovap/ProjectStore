@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="gson-2.2.2" level="application" />
+    <orderEntry type="library" name="jdbc1" level="application" />
   </component>
 </module>

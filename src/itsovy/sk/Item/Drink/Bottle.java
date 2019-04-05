@@ -19,6 +19,11 @@ public class Bottle extends Drink implements Piece {
     }
 
     @Override
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
     public int getAmount() {
         return amount;
     }
@@ -29,7 +34,8 @@ public class Bottle extends Drink implements Piece {
     }
 
     @Override
-    public String getName() {
-        return getName();
+    public void setAmount(int amount) {
+
     }
+
 }
