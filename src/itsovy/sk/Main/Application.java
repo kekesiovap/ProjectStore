@@ -1,6 +1,7 @@
 package itsovy.sk.Main;
 
 import itsovy.sk.Bill.Bill;
+import itsovy.sk.Database.Mongo;
 import itsovy.sk.Exception.BillException;
 import itsovy.sk.Item.Category;
 import itsovy.sk.Item.Drink.Bottle;
@@ -62,6 +63,10 @@ public class Application{
 
         XML check = new XML();
         check.createXML(bill);
+
+        Mongo mongo = Mongo.getInstance();
+        mongo.createMongoBill(bill);
+
         bill.closeBill();
     }
 }
