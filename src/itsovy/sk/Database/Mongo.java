@@ -16,13 +16,13 @@ import java.util.List;
 
 public class Mongo {
 
-    private static Mongo mon = new Mongo();
+    private static Mongo db = new Mongo();
 
     private Mongo() {
     }
 
     public static Mongo getInstance() {
-        return mon;
+        return db;
     }
 
     public void createMongoBill(Bill bill) throws IOException {
